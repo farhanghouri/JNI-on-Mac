@@ -1,0 +1,15 @@
+https://www.developer.com/java/data/getting-started-with-jni.html
+https://www3.ntu.edu.sg/home/ehchua/programming/java/JavaNativeInterface.html
+
+1> Write the Java Code
+2> Compile the Java Code: javac JNITest.java
+3> Create the C/C++ Header File: javah JNITest
+4> Write the C/C++ Program
+5> Create a Shared Library:
+g++ -fPIC -shared -I/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/include -I/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/include/darwin -I/Users/farhan/Documents/JNI_project/ -o /Users/farhan/Documents/JNI_project/mynativelib.so /Users/farhan/Documents/JNI_project/jnitest.cpp
+6> Run:
+java -Djava.library.path=Users/farhan/Documents/JNI_project/ JNITest
+
+
+/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/include
+/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/include/darwin
